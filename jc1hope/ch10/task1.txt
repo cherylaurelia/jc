@@ -1,0 +1,19 @@
+DECLARE list: ARRAY [0:5] OF INTEGER
+DECLARE lowest, highest, total : INTEGER
+
+FOR j <- 0 TO 5:
+    OUTPUT "Enter the element of the array"
+    INPUT list[j]
+
+lowest <- 100
+highest <- 0
+total <- 0
+
+FOR i <- 0 TO LENGTH(list):
+    total <- total + list[i]
+    IF list[i] < lowest
+        lowest <- list[i]
+    ELSE IF list[i] > highest
+        highest <- list[i]
+    END IF
+NEXT i

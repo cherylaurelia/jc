@@ -1,0 +1,30 @@
+// eol character
+
+// open file pseudocode
+
+OPENFILE <file identifier> FOR <file mode>
+
+// where file identifier may be a literal string containing the file name or a variable of type string that has been assigned the file name
+// file modes: read write append
+
+// write: overwrites existing data
+// append: add to something that exists at end of file
+
+WHILE NOT EOF("names.txt"):
+READFILE "names.txt", NameFromFile
+OUTPUT NameFromFile
+
+// usage of file pointers for each newline? btw we use eof() bc function. that takes a var?
+
+
+// reading a line of text from file
+
+DECLARE TextFromFile, MyFile: STRING
+MyFile <- "MyText.txt"
+OUTPUT "The file contains this line of text:"
+OPENFILE MyFile FOR READ
+READFILE MyFile, TextFromFile
+....
+CLOSEFILE MyFile
+
+// WRITEFILE is for both appending and writing... brh :/
