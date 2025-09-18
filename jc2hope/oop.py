@@ -50,3 +50,17 @@ for student in studentsArr:
 print(student1.getName())
 setName(student1, "haha")
 print(student1.__name)
+
+# parent class is called super class
+# child class is called sub class / derived class
+
+class Animal:
+    def __init__(self, pName):
+        self.__name = pName
+
+    def makeSound(self):
+        print("meow")
+
+
+someanimal = Animal("cat")
+someanimal.makeSound()
