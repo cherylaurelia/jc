@@ -1,38 +1,38 @@
-class Student:
-    def __init__(self, pName, pGender, pAge):
-        self.__name = pName
-        self.__gender = pGender
-        self.__age = pAge
-    
-    def getName(self):
-        return self.__name
-        
-    def getGender(self):
-        return self.__gender
-        
-    def getAge(self):
-        return self.__age
-    
-    def setName(self, newName):
-        student1.__name = newName
-        
-    def printDetails(self):
-        print(f"Student Name: {self.__name}\nStudent Age: {self.__age}\nStudent Gender: {self.__gender}")
-
-
-
-student1 = Student("Alex", "Male", 15)
-student2 = Student("Wang", "Female", 15)
-
-#student1.printDetails()
-
-studentsArr = []
-studentsArr.append(student1)
-studentsArr.append(student2)
-
-for student in studentsArr:
-    student.printDetails()
-    print()
+# class Student:
+#     def __init__(self, pName, pGender, pAge):
+#         self.__name = pName
+#         self.__gender = pGender
+#         self.__age = pAge
+#
+#     def getName(self):
+#         return self.__name
+#
+#     def getGender(self):
+#         return self.__gender
+#
+#     def getAge(self):
+#         return self.__age
+#
+#     def setName(self, newName):
+#         student1.__name = newName
+#
+#     def printDetails(self):
+#         print(f"Student Name: {self.__name}\nStudent Age: {self.__age}\nStudent Gender: {self.__gender}")
+#
+#
+#
+# student1 = Student("Alex", "Male", 15)
+# student2 = Student("Wang", "Female", 15)
+#
+# #student1.printDetails()
+#
+# studentsArr = []
+# studentsArr.append(student1)
+# studentsArr.append(student2)
+#
+# for student in studentsArr:
+#     student.printDetails()
+#     print()
     
 # access modifiers:
 # public access modifier
@@ -47,20 +47,39 @@ for student in studentsArr:
 #data hiding is when u set attributes to private so its hidden from outside world
 #all attributes private, all methods public
 
-print(student1.getName())
-setName(student1, "haha")
-print(student1.__name)
+# print(student1.getName())
+# setName(student1, "haha")
+# print(student1.__name)
 
 # parent class is called super class
 # child class is called sub class / derived class
+#inheritance
 
 class Animal:
     def __init__(self, pName):
         self.__name = pName
 
     def makeSound(self):
-        print("meow")
+        print("meowgh")
 
 
 someanimal = Animal("cat")
 someanimal.makeSound()
+
+class Dog(Animal):
+    def __init__(self, pName, pColor):
+        Animal.__init__(self, pName)
+        self.__color = pColor
+
+    def makeSound(self):
+        print("WOOOFWOOGOWOOOFWOOGOWOOOFarfARFARRFARF") # method overriding
+
+    def getColor(self):
+        return self.__color
+
+# animal need (self), super() dont need
+
+dog = Dog("yura", "blonde")
+dog.makeSound()
+
+#method overloading
