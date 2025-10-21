@@ -33,7 +33,7 @@
 # for student in studentsArr:
 #     student.printDetails()
 #     print()
-    
+
 # access modifiers:
 # public access modifier
 # private access modifier - name mangling
@@ -43,9 +43,9 @@
 # student1._name = "cait"
 # print(student1._name) #wouldn't work in other langs if u use _ (protected am)
 
-#private is __ so eg self.__name. if u do print(student1.__name) it would be an error
-#data hiding is when u set attributes to private so its hidden from outside world
-#all attributes private, all methods public
+# private is __ so eg self.__name. if u do print(student1.__name) it would be an error
+# data hiding is when u set attributes to private so its hidden from outside world
+# all attributes private, all methods public
 
 # print(student1.getName())
 # setName(student1, "haha")
@@ -53,7 +53,7 @@
 
 # parent class is called super class
 # child class is called sub class / derived class
-#inheritance
+# inheritance
 
 class Animal:
     def __init__(self, pName):
@@ -66,24 +66,27 @@ class Animal:
 someanimal = Animal("cat")
 someanimal.makeSound()
 
+
 class Dog(Animal):
     def __init__(self, pName, pColor):
         Animal.__init__(self, pName)
         self.__color = pColor
 
     def makeSound(self):
-        print("wooF") # method overriding
+        print("wooF")  # method overriding
 
     def getColor(self):
         return self.__color
+
 
 # animal need (self), super() dont need
 
 dog = Dog("yura", "blonde")
 dog.makeSound()
 
-#method overloading (same method but diff number of parameters, same class)
-#method overloading can refer to a lot of methods with the same name, but depending on parameters, type, different methods r executed
+
+# method overloading (same method but diff number of parameters, same class)
+# method overloading can refer to a lot of methods with the same name, but depending on parameters, type, different methods r executed
 
 class Test:
     def __init__(self, pa, pb, pc):
@@ -102,7 +105,26 @@ class Test:
         self.__c = newc
 
 
-def add(a,b,c=0):
+def add(a, b, c=0):
     return a + b + c
 
-print(add(3,4,3))
+
+print(add(3, 4, 3))
+
+
+class Student:
+    def __init__(self, m1, m2):
+        self.mark1 = m1
+        self.mark2 = m2
+
+    def showmarks(self):
+        return (self.mark1, self.mark2)
+
+    def __add__(self, secondObj):
+
+    return()
+
+s1 = Student(20, 30)
+s2 = Student(40, 50)
+
+print(s1 + s2)
