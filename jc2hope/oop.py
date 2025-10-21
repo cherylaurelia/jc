@@ -82,4 +82,27 @@ class Dog(Animal):
 dog = Dog("yura", "blonde")
 dog.makeSound()
 
-#method overloading
+#method overloading (same method but diff number of parameters, same class)
+#method overloading can refer to a lot of methods with the same name, but depending on parameters, type, different methods r executed
+
+class Test:
+    def __init__(self, pa, pb, pc):
+        self.__a = pa
+        self.__b = pb
+        self.__c = pc
+
+    def add(self, newa, newb):
+        self.__a = newa
+        self.__b = newb
+        return (self.__a, self.__b)
+
+    def add(self, newa, newb, newc):
+        self.__a = newa
+        self.__b = newb
+        self.__c = newc
+
+
+def add(a,b,c=0):
+    return a + b + c
+
+print(add(3,4))
