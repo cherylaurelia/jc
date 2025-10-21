@@ -72,7 +72,7 @@ class Dog(Animal):
         self.__color = pColor
 
     def makeSound(self):
-        print("WOOOFWOOGOWOOOFWOOGOWOOOFarfARFARRFARF") # method overriding
+        print("wooF") # method overriding
 
     def getColor(self):
         return self.__color
