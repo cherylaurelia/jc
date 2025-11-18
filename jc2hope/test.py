@@ -1,8 +1,8 @@
 class Student:
     def __init__(self, pName, pAge, pGender):
-        self.__sName = pName
-        self.__sAge = pAge
-        self.__sGender = pGender
+        self.__sName = pName  # of type string
+        self.__sAge = pAge  # of type integer
+        self.__sGender = pGender  # of type string
 
     def getName(self):
         return self.__sName
