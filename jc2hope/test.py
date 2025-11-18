@@ -5,5 +5,9 @@ class Student:
         self.sGender = pGender
 
 
-student1 = Student("Alex", 22, "Male")
-print(student1.sName)
+try:
+    file = open("textfile.txt", 'r')              #copy path
+    line = file.readline()
+    print(line)
+except FileNotFoundError as e:
+    print(f"Not Found! {e}")
