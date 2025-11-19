@@ -32,5 +32,6 @@ def ChooseCard():
         if 1 <= cardinput <= 30:
             if cards[cardinput - 1] == True:
                 print("Invalid")
+            elif cards[card]
 
 
