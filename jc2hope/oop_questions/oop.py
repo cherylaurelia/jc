@@ -120,9 +120,6 @@ class Student:
     def showmarks(self):
         return (self.mark1, self.mark2)
 
-    def __add__(self, secondObj):
-
-    return()
 
 s1 = Student(20, 30)
 s2 = Student(40, 50)

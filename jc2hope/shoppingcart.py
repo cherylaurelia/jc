@@ -22,9 +22,6 @@ class Cart:
         def __init__(self):
             self.cartArr = []
 
-        def calculateTotal(self):
-            return sum(cart.Arr.
-
         def addItem(self, newitem):
             self.cartArr.append(newitem)
 
