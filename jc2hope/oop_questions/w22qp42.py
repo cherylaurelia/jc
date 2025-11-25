@@ -40,24 +40,19 @@ except FileNotFoundError as e:
     
 nameinput = str(input("Enter a name: "))
 
-while True:
-    found = False
-    for character in Characters:
-        if character.GetName() == nameinput:
-            found = True
+idx = None
+
+while idx is None:
+    for j in range(len(Characters)):
+        if Characters[j].GetName().lower() == nameinput.lower():
+            idx = j
             break
-    if found:
-        break
-    nameinput = input("Enter a name: ")
+    if idx is None:
+        nameinput = input("Enter a valid name: ")
 
-
-for j in range(len(Characters)):
-    if Characters[j].GetName() == nameinput:
-        idx = j
         
 #f
      
-print(Characters[idx].GetX(), Characters[idx].GetY())
 
 letterinput = str(input("Enter a direction (A, W, S, D): "))
 
@@ -77,4 +72,7 @@ elif lowerletterinput == "s":
 elif lowerletterinput == "d":
     Characters[idx].ChangePosition(1,0)
 
-print(Characters[idx].GetX(), Characters[idx].GetY())
+
+#g i)
+
+print(f"{Characters[idx].GetName()} has changed coordinates to X = {Characters[idx].GetX()} and Y = {Characters[idx].GetY()}")
