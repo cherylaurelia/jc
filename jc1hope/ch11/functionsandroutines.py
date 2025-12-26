@@ -100,7 +100,8 @@
 # FUNCTION SqrofNum(BYVAL myNum: INTEGER) RETURNS INTEGER //func always byval anyway
 #   Sqr = myNum * myNum
 #   RETURN Sqr
-# ENDFUNCTION
+# ENDFUNCTION h
+
 
 #Sqr <- SqrofNum(4) // sqr is now 16
 
