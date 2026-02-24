@@ -57,8 +57,4 @@ def add(item):
     
     itempointer = rootpointer
 
-    while (binarytree[itempointer].GetLeft() != -1) or (binarytree[itempointer].GetRight() != -1):
-        if item < binarytree[itempointer].GetLeft():
-            itempointer = binarytree[itempointer].GetLeft()
-        elif item > binarytree[itempointer].GetRight():
-            itempointer = binarytree[itempointer].GetRight()
+    #case 1 tree is empty
